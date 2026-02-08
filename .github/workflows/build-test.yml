@@ -1,0 +1,32 @@
+name: Build and Test
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6.0.2
+      - uses: pnpm/action-setup@v4.2.0
+        with:
+          version: 10
+      - uses: actions/setup-node@v6.2.0
+        with:
+          node-version: 24
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build
+        run: pnpm build
+      # No tests present right now
+      # - name: Test
+      # run: pnpm test
+      - name: Lint
+        run: pnpm lint

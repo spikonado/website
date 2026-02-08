@@ -1,0 +1,8 @@
+# Nix
+flake*
+
+# Package Managers
+pnpm-lock.yaml
+
+# Miscellaneous
+/static/
