@@ -23,10 +23,10 @@ jobs:
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install
+      - name: Lint
+        run: pnpm lint
       - name: Build
         run: pnpm build
       # No tests present right now
       # - name: Test
       # run: pnpm test
-      - name: Lint
-        run: pnpm lint
