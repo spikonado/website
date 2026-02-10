@@ -21,8 +21,8 @@
 			<h1
 				class="font-serif text-4xl leading-[1.1] tracking-tight text-foreground md:text-6xl md:leading-[1.1] lg:text-7xl"
 			>
-				Creating tech that transforms <br class="hidden md:block" />
-				your ideas into a <br class="hidden md:block" />
+				Creating tech that transforms <br />
+				your ideas into a <br />
 				<TextRotator
 					words={animatedWords}
 					interval={2000}
