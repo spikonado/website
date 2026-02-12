@@ -26,7 +26,7 @@ jobs:
       - name: Lint
         run: pnpm lint
       - name: Build
-        run: pnpm build
+        run: pnpm build --mode test
       # No tests present right now
       # - name: Test
       # run: pnpm test
